@@ -1,8 +1,8 @@
 {
-  "name": "rak-lechitsa",
+  "name": "electricity",
   "version": "1.0.0",
-  "description": "project for rak lechitsa",
-  "author": "praktikum",
+  "description": "lending",
+  "author": "Ilya",
   "private": true,
   "scripts": {
     "dev": "nuxt",
