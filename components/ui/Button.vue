@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button :class="['btn', `btn_theme_${theme}`, { btn_disabled: disabled }]">
+    <button :class="['btn', `btn_theme_${theme}`]">
       <slot></slot>
     </button>
   </div>
@@ -10,7 +10,6 @@
 export default {
   props: {
     theme: String,
-    disabled: Boolean,
   },
 };
 </script>
