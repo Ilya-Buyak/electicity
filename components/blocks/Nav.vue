@@ -2,7 +2,7 @@
   <nav class="navigation">
     <ul class="navigation__items">
       <li class="navigation__item" v-for="link in links" :key="link.id">
-        <nav-link href="https://vk.com">{{ link.text }}</nav-link>
+        <nav-link @link-click="setActive(link.block)">{{ link.text }}</nav-link>
       </li>
     </ul>
   </nav>
@@ -11,26 +11,21 @@
 <script>
 import Link from '~/components/ui/Link';
 export default {
-  data() {
-    return {
-      links: [
-        {
-          id: 1,
-          text: 'Услуги',
-        },
-        {
-          id: 2,
-          text: 'Наши работы',
-        },
-        {
-          id: 3,
-          text: 'О нас',
-        },
-      ],
-    };
+  methods: {
+    setActive(block, event) {
+      document.querySelector('' + block).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    },
   },
   components: {
     'nav-link': Link,
+  },
+  computed: {
+    links() {
+      return this.$store.getters['nav/links'];
+    },
   },
 };
 </script>

@@ -24,7 +24,6 @@ export default {
 </script>
 <style scoped>
 .header {
-  background-color: rgba(175, 175, 175, 0.7);
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -35,7 +34,6 @@ export default {
   align-items: center;
 }
 .header__title {
-  color: white;
   font-size: 24px;
 }
 </style>
