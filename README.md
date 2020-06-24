@@ -1,6 +1,6 @@
 # electricity
 
-> lending
+> landing
 
 ## Build Setup
 
