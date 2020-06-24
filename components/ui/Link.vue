@@ -23,4 +23,8 @@ export default {
   opacity: 0.5;
   transition: 0.3s;
 }
+.link_theme_instagram {
+  font-size: 24px;
+  border-bottom: 2px solid black;
+}
 </style>

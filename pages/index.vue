@@ -3,6 +3,7 @@
     <my-header />
     <cover />
     <jobs />
+    <instagram />
     <about />
     <facts />
     <my-footer />
@@ -13,6 +14,7 @@
 import Header from '~/components/blocks/Header';
 import Cover from '~/components/blocks/Cover';
 import Jobs from '~/components/blocks/Jobs';
+import Instagram from '~/components/blocks/Instagram';
 import About from '~/components/blocks/About';
 import Facts from '~/components/blocks/Facts';
 import Footer from '~/components/blocks/Footer';
@@ -25,6 +27,7 @@ export default {
     about: About,
     facts: Facts,
     'my-footer': Footer,
+    instagram: Instagram,
   },
 };
 </script>

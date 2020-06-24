@@ -19,7 +19,9 @@
             <p class="about__item-text">{{ item.text }}</p>
           </li>
         </ul>
-        <about-btn class="btn" theme="about">Оставить контакт</about-btn>
+        <about-btn theme="about" @btn-click="openPopup"
+          >Оставить контакт</about-btn
+        >
       </div>
     </section>
   </app-container>
@@ -39,6 +41,11 @@ export default {
   computed: {
     items() {
       return this.$store.getters['about/items'];
+    },
+  },
+  methods: {
+    openPopup() {
+      this.$store.commit('popup/openForm');
     },
   },
 };

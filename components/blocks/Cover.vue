@@ -4,7 +4,7 @@
     <h1 class="cover__title">
       Любые виды электромонтажных работ по всей Беларуси
     </h1>
-    <cover-btn theme="cover">Оставить заявку</cover-btn>
+    <cover-btn theme="cover" @btn-click="openPopup">Оставить заявку</cover-btn>
     <decoration-btn
       class="cover__decoration"
       @btn-click="setActive"
@@ -24,11 +24,13 @@ export default {
   },
   methods: {
     setActive(event) {
-      window.scrollBy({
-        top: window.innerHeight,
-        left: 0,
+      document.querySelector('#jobs').scrollIntoView({
         behavior: 'smooth',
+        block: 'start',
       });
+    },
+    openPopup() {
+      this.$store.commit('popup/openForm');
     },
   },
 };
@@ -43,7 +45,7 @@ export default {
   position: relative;
   width: 100%;
   height: calc(100vh - 80px);
-  background-color: rgba(175, 175, 175, 0.7);
+  background-color: rgba(128, 128, 128, 0.5);
 }
 .cover__img {
   object-fit: cover;

@@ -13,9 +13,8 @@ import Link from '~/components/ui/Link';
 export default {
   methods: {
     setActive(block, event) {
-      document.querySelector('' + block).scrollIntoView({
+      document.querySelector(block).scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
       });
     },
   },
